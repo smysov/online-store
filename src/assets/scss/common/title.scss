@@ -5,6 +5,11 @@
   font-weight: 700;
   text-transform: uppercase;
 
+  &_product {
+    text-transform: capitalize;
+    color: #5d5d5d;
+  }
+
   @media (min-width: 480px) {
     font-size: 24px;
   }

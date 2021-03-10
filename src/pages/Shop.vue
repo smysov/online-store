@@ -19,9 +19,7 @@
 import itemProduct from '@/components/ItemProduct.vue';
 
 export default {
-  components: {
-    itemProduct,
-  },
+  components: { itemProduct },
   data() {
     return {
       productList: null,
@@ -29,7 +27,6 @@ export default {
   },
   created() {
     this.productList = this.$store.getters.getProductList;
-    console.log(this.productList);
   },
 };
 </script>

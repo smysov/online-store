@@ -4,7 +4,9 @@
       <img :src="product.image" :alt="product.title" />
     </div>
     <div class="products__wrapper-content">
-      <h2 class="products__link link">{{ product.title }}</h2>
+      <router-link class="products__link link" :to="/shop/ + product.article">{{
+        product.title
+      }}</router-link>
     </div>
   </li>
 </template>
