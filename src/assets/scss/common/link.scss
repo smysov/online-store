@@ -1,0 +1,27 @@
+.link {
+  cursor: pointer;
+  color: #4343aa;
+
+  @media screen and (min-width: $phoneWidth) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: $tableWidth) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $desktopWidth) {
+    font-size: 24px;
+  }
+
+  &_white {
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+  }
+  &_danger {
+    border-bottom: 1px solid #b53f3f;
+    color: #b53f3f;
+  }
+  &_success {
+    border-bottom: 1px solid #52bd5b;
+    color: #47be51;
+  }
+}
