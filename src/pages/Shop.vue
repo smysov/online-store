@@ -5,7 +5,7 @@
         <h1 class="title">Shop</h1>
         <ul class="products">
           <itemProduct
-            v-for="product in productList"
+            v-for="product in products"
             :key="product.article"
             :product="product"
           />
@@ -22,11 +22,11 @@ export default {
   components: { itemProduct },
   data() {
     return {
-      productList: null,
+      products: null,
     };
   },
   created() {
-    this.productList = this.$store.getters.getProductList;
+    this.products = this.$store.getters.getProducts;
   },
 };
 </script>
