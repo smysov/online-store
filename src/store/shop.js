@@ -1,6 +1,6 @@
 export default {
   state: {
-    productList: [
+    products: [
       {
         article: 'VD3HY28',
         title: 'Кеды Vans Old Skool',
@@ -38,9 +38,9 @@ export default {
   mutations: {},
   actions: {},
   getters: {
-    getProductList(state) {
-      return state.productList;
+    getProducts(state) {
+      return state.products;
     },
-    getProduct: (state) => (article) => state.productList.find((item) => item.article === article),
+    getProduct: (state) => (article) => state.products.find((item) => item.article === article),
   },
 };
