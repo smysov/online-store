@@ -3,9 +3,10 @@
     <section class="section">
       <div class="container">
         <h1 class="title">Shop</h1>
-        <ul class="products">
+        <preloader v-if="loading" />
+        <ul class="products" v-else>
           <itemProduct
-            v-for="product in products"
+            v-for="product of products"
             :key="product.article"
             :product="product"
           />
@@ -17,16 +18,35 @@
 
 <script>
 import itemProduct from '@/components/ItemProduct.vue';
+import preloader from '@/components/Preloader.vue';
+import axios from '@/plugins/axios';
 
 export default {
-  components: { itemProduct },
+  components: { itemProduct, preloader },
   data() {
     return {
-      products: null,
+      loading: true,
     };
   },
-  created() {
-    this.products = this.$store.getters.getProducts;
+  async mounted() {
+    try {
+      const response = await axios.get('products/products.json');
+      this.$store.commit('GET_PRODUCTS', response.data);
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 2000);
+      });
+    } catch (e) {
+      console.log(e.response.data);
+    } finally {
+      this.loading = false;
+    }
+  },
+  computed: {
+    products() {
+      return this.$store.getters.getProducts;
+    },
   },
 };
 </script>
