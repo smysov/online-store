@@ -5,6 +5,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'preloader',
+};
+</script>
+
 <style lang="scss" scoped>
 .preloader {
   display: flex;
