@@ -58,7 +58,6 @@ export default {
   transition: 0.3s linear all;
 
   &:hover {
-    transform: scale(0.95);
     color: cornflowerblue;
   }
 
@@ -75,24 +74,18 @@ export default {
 
 .navbar__link {
   font-weight: 700;
-  transition: 0.3s all;
+  transition: 0.5s all;
+  text-transform: uppercase;
 
   &:hover {
     opacity: 0.8;
+    color: #6a6af5;
+    transform: translateY(-1px);
   }
 
   &.router-link-exact-active {
     position: relative;
     color: #2929bb;
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 3px;
-      background-color: #2929bb;
-    }
   }
 }
 </style>

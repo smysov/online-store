@@ -2,7 +2,6 @@
   <div class="wrapper__content wrapper__content_fixed">
     <section class="section">
       <div class="container">
-        <h1 class="title">Shop</h1>
         <preloader v-if="loading" />
         <ul class="products" v-else>
           <product-item
