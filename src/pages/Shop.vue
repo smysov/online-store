@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper__content wrapper__content_fixed">
+    <header-main />
     <section class="section">
       <div class="container">
         <preloader v-if="loading" />
@@ -18,11 +19,12 @@
 <script>
 import productItem from '@/components/ProductItem.vue';
 import preloader from '@/components/Preloader.vue';
+import headerMain from '@/components/HeaderMain.vue';
 import axios from '@/plugins/axios';
 
 export default {
   name: 'shop',
-  components: { productItem, preloader },
+  components: { productItem, preloader, headerMain },
   data() {
     return {
       loading: true,
