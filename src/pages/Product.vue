@@ -29,6 +29,7 @@
 
 <script>
 export default {
+  name: 'product',
   data() {
     return {
       product: null,

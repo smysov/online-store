@@ -5,7 +5,7 @@
         <h1 class="title">Shop</h1>
         <preloader v-if="loading" />
         <ul class="products" v-else>
-          <itemProduct
+          <product-item
             v-for="product of products"
             :key="product.article"
             :product="product"
@@ -17,12 +17,13 @@
 </template>
 
 <script>
-import itemProduct from '@/components/ItemProduct.vue';
+import productItem from '@/components/ProductItem.vue';
 import preloader from '@/components/Preloader.vue';
 import axios from '@/plugins/axios';
 
 export default {
-  components: { itemProduct, preloader },
+  name: 'shop',
+  components: { productItem, preloader },
   data() {
     return {
       loading: true,
