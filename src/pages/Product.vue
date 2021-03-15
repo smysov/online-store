@@ -5,7 +5,16 @@
         <h1 class="title title_product">{{ product.title }}</h1>
         <div class="product">
           <div class="product__wrapper-image">
-            <img :src="product.image" :alt="product.title" />
+            <carousel
+              :perPage="1"
+              :paginationEnable="true"
+              paginationColor="#b3b3b3"
+              paginationActiveColor="#494ce8"
+            >
+              <slide v-for="(slide, index) of product.gallery" :key="index">
+                <img :src="slide.photo" :alt="product.title" />
+              </slide>
+            </carousel>
           </div>
           <div class="product__wrapper-content">
             <span>Описание</span>
@@ -20,6 +29,7 @@
 
 <script>
 export default {
+  name: 'product',
   data() {
     return {
       product: null,
@@ -32,7 +42,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .product {
   display: flex;
   flex-direction: column;
@@ -103,5 +113,11 @@ p {
   @media (min-width: 1100px) {
     font-size: 22px;
   }
+}
+
+.VueCarousel-inner {
+  visibility: visible !important;
+  flex-basis: 100% !important;
+  width: 100% !important;
 }
 </style>
