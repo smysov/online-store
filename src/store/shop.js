@@ -7,19 +7,19 @@ export default {
         description:
           'Vans Old Skool - классическая версия низких кедов, которые выпускаются брендом с 1977 года. За многолетнюю историю Vans Old Skool стали настоящим воплощением калифорнийского стиля и любимой обувью скейтбордистов и серферов. Кеды, которые станут отличным дополнением каждого гардероба. Данное издание модели изготовлено из прочного текстиля.',
         price: '4.600 ₽',
-        image: require('../assets/images/vans-1.jpg'),
+        image: require('../assets/images/vans-1.png'),
         gallery: [
           {
             name: 'First photo sneaker',
-            photo: require('../assets/images/vans-1.jpg'),
+            photo: require('../assets/images/vans-1.png'),
           },
           {
             name: 'Second photo sneaker',
-            photo: require('../assets/images/vans-2.jpg'),
+            photo: require('../assets/images/vans-2.png'),
           },
           {
             name: 'Third photo sneaker',
-            photo: require('../assets/images/vans-3.jpg'),
+            photo: require('../assets/images/vans-3.png'),
           },
         ],
       },
@@ -29,19 +29,19 @@ export default {
         description:
           'Обувь Nike SB Zoom Stefan Janoski RM сочетает в себе минималистичный дизайн и современную посадку. Новая мягкая стелька и гибкая подметка обеспечивают уверенное сцепление с доской с первых минут.',
         price: '5.950 ₽',
-        image: require('../assets/images/nike-1.jpg'),
+        image: require('../assets/images/nike-1.png'),
         gallery: [
           {
             name: 'First photo sneaker',
-            photo: require('../assets/images/nike-1.jpg'),
+            photo: require('../assets/images/nike-1.png'),
           },
           {
             name: 'Second photo sneaker',
-            photo: require('../assets/images/nike-2.jpg'),
+            photo: require('../assets/images/nike-2.png'),
           },
           {
             name: 'Third photo sneaker',
-            photo: require('../assets/images/nike-3.jpg'),
+            photo: require('../assets/images/nike-3.png'),
           },
         ],
       },
@@ -51,19 +51,19 @@ export default {
         description:
           'Ralph Sampson MC – обновленная версия спортивной модели, созданной в честь участника баскетбольного Зала славы, игрока «Хьюстон Рокетс», легендарного Ральфа Сэмпсона. Современную итерацию отличают стильная расцветка и культовый брендинг.',
         price: '3.650 ₽',
-        image: require('../assets/images/puma-1.jpg'),
+        image: require('../assets/images/puma-1.png'),
         gallery: [
           {
             name: 'First photo sneaker',
-            photo: require('../assets/images/puma-1.jpg'),
+            photo: require('../assets/images/puma-1.png'),
           },
           {
             name: 'Second photo sneaker',
-            photo: require('../assets/images/puma-2.jpg'),
+            photo: require('../assets/images/puma-2.png'),
           },
           {
             name: 'Third photo sneaker',
-            photo: require('../assets/images/puma-3.jpg'),
+            photo: require('../assets/images/puma-3.png'),
           },
         ],
       },
@@ -73,19 +73,19 @@ export default {
         description:
           'В 1917 г. кеды All Star явили миру белое полотно. Сначала они играли в баскетбол, потом играли рок-н-ролл, а потом - все подряд. Их носили атлеты и артисты, экспериментаторы, бунтари и провидцы. И теперь, после всего пережитого, они по-прежнему могут быть всем, чем только захотите.',
         price: '4.200 ₽',
-        image: require('../assets/images/converse-1.jpg'),
+        image: require('../assets/images/converse-1.png'),
         gallery: [
           {
             name: 'First photo sneaker',
-            photo: require('../assets/images/converse-1.jpg'),
+            photo: require('../assets/images/converse-1.png'),
           },
           {
             name: 'Second photo sneaker',
-            photo: require('../assets/images/converse-2.jpg'),
+            photo: require('../assets/images/converse-2.png'),
           },
           {
             name: 'Third photo sneaker',
-            photo: require('../assets/images/converse-3.jpg'),
+            photo: require('../assets/images/converse-3.png'),
           },
         ],
       },
