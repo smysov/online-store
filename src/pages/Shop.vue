@@ -37,7 +37,7 @@ export default {
       await new Promise((resolve) => {
         setTimeout(() => {
           resolve();
-        }, 2000);
+        }, 1500);
       });
     } catch (e) {
       console.log(e.response.data);

@@ -1,7 +1,7 @@
 <template>
   <div class="preloader">
-    <div class="preloader__icon"></div>
-    <span id="by">Loading products...</span>
+    <div class="loader"></div>
+    <!-- <span id="by">Loading...</span> -->
   </div>
 </template>
 
@@ -17,39 +17,24 @@ export default {
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
-
-  &__icon {
-    width: 80px;
-    height: 80px;
-    background: blue;
-    border-radius: 10px;
-    transition: all 5s;
-    animation: loader 2s linear infinite;
-  }
+  padding-top: 30px;
 }
 
-#by {
-  font-family: 'Arima Madurai', cursive;
-  color: #4a676a;
-  font-size: 12px;
-
-  @media (min-width: 480px) {
-    font-size: 16px;
-  }
+.loader {
+  height: 40px;
+  width: 40px;
+  border: 5px solid rgba(26, 26, 233, 0.2);
+  border-top: 5px solid #5252ff;
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
 }
 
-@keyframes loader {
+@keyframes rotate {
   0% {
     transform: rotate(0deg);
-    opacity: 0.3;
-  }
-  50% {
-    transform: rotateX(0deg) rotateY(180deg);
-    opacity: 0.6;
   }
   100% {
-    transform: rotateX(180deg) rotateY(180deg);
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 </style>

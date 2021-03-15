@@ -1,0 +1,21 @@
+{
+  "article": "M7652",
+  "title": "Converse Chuck Taylor All Star Core",
+  "description": "В 1917 г. кеды All Star явили миру белое полотно. Сначала они играли в баскетбол, потом играли рок-н-ролл, а потом - все подряд. Их носили атлеты и артисты, экспериментаторы, бунтари и провидцы. И теперь, после всего пережитого, они по-прежнему могут быть всем, чем только захотите.",
+  "price": "4.200 ₽",
+  "image": "/images/converse-1.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/converse-1.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/converse-2.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/converse-3.png"
+    }
+  ]
+}
