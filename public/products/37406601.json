@@ -1,0 +1,21 @@
+{
+  "article": "37406601",
+  "title": "Puma Ralph Sampson MC",
+  "description": "Ralph Sampson MC – обновленная версия спортивной модели, созданной в честь участника баскетбольного Зала славы, игрока «Хьюстон Рокетс», легендарного Ральфа Сэмпсона. Современную итерацию отличают стильная расцветка и культовый брендинг.",
+  "price": "3.650 ₽",
+  "image": "/images/puma-1.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/puma-1.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/puma-2.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/puma-3.png"
+    }
+  ]
+}

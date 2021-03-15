@@ -1,9 +1,13 @@
 <template>
   <div class="wrapper__content wrapper__content_fixed">
+    <header-main />
     <section class="section">
       <div class="container">
-        <h1 class="title title_product">{{ product.title }}</h1>
-        <div class="product">
+        <router-link class="link-back" :to="linkShop.url">{{
+          linkShop.name
+        }}</router-link>
+        <preloader v-if="loading" />
+        <div class="product" v-else>
           <div class="product__wrapper-image">
             <carousel
               :perPage="1"
@@ -17,7 +21,8 @@
             </carousel>
           </div>
           <div class="product__wrapper-content">
-            <span>Описание</span>
+            <h1 class="title title_product">{{ product.title }}</h1>
+            <span>Описание:</span>
             <p>{{ product.description }}</p>
             <span class="product__price">Стоимость: {{ product.price }}</span>
           </div>
@@ -28,21 +33,93 @@
 </template>
 
 <script>
+import headerMain from '../components/HeaderMain.vue';
+import preloader from '../components/Preloader.vue';
+import axios from '../plugins/axios';
+
 export default {
   name: 'product',
+  components: { preloader, headerMain },
   data() {
     return {
+      loading: true,
       product: null,
+      linkShop: {
+        name: 'back',
+        url: '/shop',
+      },
     };
   },
-  created() {
+  async mounted() {
     const { article } = this.$route.params;
-    this.product = this.$store.getters.getProduct(article);
+    try {
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 1000);
+      });
+      const response = await axios.get(`products/${article}.json`);
+      this.product = response.data;
+    } catch (e) {
+      console.log('error');
+    } finally {
+      this.loading = false;
+    }
   },
 };
 </script>
 
 <style lang="scss">
+.link-back {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2929bb;
+  padding-left: 20px;
+  transition: 0.3s linear all;
+  z-index: 100;
+
+  @media (min-width: 480px) {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: #000;
+
+    &::before {
+      border-color: #000;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #2929bb;
+    border-left: 2px solid #2929bb;
+    transform: rotate(45deg);
+    transition: 0.3s linear all;
+
+    @media (min-width: 480px) {
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-width: 3px;
+    }
+    @media (min-width: 768px) {
+      top: 6px;
+    }
+  }
+}
+
 .product {
   display: flex;
   flex-direction: column;
@@ -88,6 +165,10 @@ export default {
       font-size: 24px;
     }
   }
+}
+
+.title_product {
+  padding-top: 20px;
 }
 
 span {
