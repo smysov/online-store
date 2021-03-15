@@ -26,9 +26,13 @@ export default new Router({
       component: Product,
     },
     {
-      path: '*',
-      name: 'notFound',
+      path: '/404',
+      name: '404',
       component: NotFound,
+    },
+    {
+      path: '*',
+      redirect: '/404',
     },
   ],
 });
