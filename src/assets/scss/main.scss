@@ -111,4 +111,10 @@ section,
   }
 }
 
+.VueCarousel-inner {
+  visibility: visible !important;
+  flex-basis: 100% !important;
+  width: 100% !important;
+}
+
 @import './common.scss';
