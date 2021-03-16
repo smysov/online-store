@@ -71,15 +71,13 @@ export default {
 
 <style lang="scss" scoped>
 .link-back {
-  position: absolute;
-  top: 0;
+  position: relative;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   color: #2929bb;
   padding-left: 20px;
   transition: 0.3s linear all;
-  z-index: 100;
 
   @media (min-width: 480px) {
     font-size: 16px;
@@ -99,7 +97,7 @@ export default {
   &::before {
     position: absolute;
     top: 4px;
-    left: 10px;
+    left: 12px;
     content: '';
     width: 8px;
     height: 8px;
@@ -109,13 +107,14 @@ export default {
     transition: 0.3s linear all;
 
     @media (min-width: 480px) {
-      top: 5px;
+      top: 3px;
+      left: 11px;
       width: 10px;
       height: 10px;
       border-width: 3px;
     }
     @media (min-width: 768px) {
-      top: 6px;
+      top: 4.4px;
     }
   }
 }
