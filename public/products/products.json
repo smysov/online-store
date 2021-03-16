@@ -34,5 +34,23 @@
     "title": "Converse Chuck Taylor All Star Cx",
     "price": "9.450 ₽",
     "image": "/images/converse-7.png"
+  },
+  {
+    "article": "168568",
+    "title": "Converse Chuck Lite",
+    "price": "6.399 ₽",
+    "image": "/images/converse-10.png"
+  },
+  {
+    "article": "37551601",
+    "title": "Puma x Peanuts Ralph Sampson",
+    "price": "7.999 ₽",
+    "image": "/images/puma-4.png"
+  },
+  {
+    "article": "41192",
+    "title": "Dc trase tx m shoe",
+    "price": "5.250 ₽",
+    "image": "/images/dc-1.png"
   }
 ]

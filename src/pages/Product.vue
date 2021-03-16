@@ -156,11 +156,10 @@ export default {
   }
 
   &__wrapper-image {
-    max-width: 300px;
-  }
-
-  &__wrapper-image {
     text-align: center;
+    @media (min-width: 768px) {
+      max-width: 340px;
+    }
   }
 
   &__wrapper-content {

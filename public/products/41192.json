@@ -1,0 +1,17 @@
+{
+  "article": "41192",
+  "title": "DC TRASE TX M SHOE",
+  "description": "Совершенство в простоте. Эти невероятно легкие кеды на вулканизированной подошве придутся по вкусу ценителям комфорта и лаконичного стиля. DC Trase TX благодаря простому силуэту отлично впишутся в любой гардероб.",
+  "price": "5.250 ₽",
+  "image": "/images/dc-1.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/dc-1.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/dc-2.png"
+    }
+  ]
+}
