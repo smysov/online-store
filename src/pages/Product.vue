@@ -21,7 +21,7 @@
             </carousel>
           </div>
           <div class="product__wrapper-content">
-            <h1 class="title title_product">{{ product.title }}</h1>
+            <h2 class="product__title">{{ product.title }}</h2>
             <span>Описание:</span>
             <p>{{ product.description }}</p>
             <span class="product__price">Стоимость: {{ product.price }}</span>
@@ -69,17 +69,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .link-back {
-  position: absolute;
-  top: 0;
+  position: relative;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   color: #2929bb;
   padding-left: 20px;
   transition: 0.3s linear all;
-  z-index: 100;
 
   @media (min-width: 480px) {
     font-size: 16px;
@@ -99,7 +97,7 @@ export default {
   &::before {
     position: absolute;
     top: 4px;
-    left: 10px;
+    left: 12px;
     content: '';
     width: 8px;
     height: 8px;
@@ -109,13 +107,14 @@ export default {
     transition: 0.3s linear all;
 
     @media (min-width: 480px) {
-      top: 5px;
+      top: 3px;
+      left: 11px;
       width: 10px;
       height: 10px;
       border-width: 3px;
     }
     @media (min-width: 768px) {
-      top: 6px;
+      top: 4.4px;
     }
   }
 }
@@ -125,21 +124,41 @@ export default {
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
+  padding-top: 30px;
 
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  &__wrapper-content,
-  &__wrapper-image {
-    max-width: 95%;
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #858585;
+    margin-bottom: 5px;
 
     @media (min-width: 480px) {
-      max-width: 80%;
+      font-size: 22px;
+    }
+    @media (min-width: 480px) {
+      font-size: 24px;
+    }
+  }
+
+  &__wrapper-content {
+    @media (min-width: 480px) {
+      max-width: 470px;
     }
     @media (min-width: 768px) {
-      max-width: 48%;
+      max-width: 47%;
+    }
+  }
+
+  &__wrapper-image {
+    text-align: center;
+    @media (min-width: 768px) {
+      max-width: 340px;
     }
   }
 
@@ -147,7 +166,6 @@ export default {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    text-align: center;
 
     @media (min-width: 768px) {
       text-align: left;
@@ -155,11 +173,11 @@ export default {
   }
 
   &__price {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 
     @media (min-width: 480px) {
-      font-size: 22px;
+      font-size: 20px;
     }
     @media (min-width: 7680px) {
       font-size: 24px;
@@ -167,12 +185,9 @@ export default {
   }
 }
 
-.title_product {
-  padding-top: 20px;
-}
-
 span {
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
 
   @media (min-width: 480px) {
     font-size: 20px;
@@ -183,22 +198,16 @@ span {
 }
 
 p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   margin-bottom: 15px;
 
   @media (min-width: 480px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
   @media (min-width: 1100px) {
     font-size: 22px;
   }
-}
-
-.VueCarousel-inner {
-  visibility: visible !important;
-  flex-basis: 100% !important;
-  width: 100% !important;
 }
 </style>
