@@ -1,0 +1,21 @@
+{
+  "article": "37551601",
+  "title": "Puma x Peanuts Ralph Sampson",
+  "description": "На создание новой модели нас вдохновил четырехкратный участник Матча всех звезд, обладатель звания «Новичок года NBA», выпускник «Хьюстон Рокетс» и член Баскетбольного Зала славы – Ральф Сэмпсон. В этой классической, элегантной, высококлассной обуви сочетаются спортивный стиль и современная городская мода.",
+  "price": "7.999 ₽",
+  "image": "/images/puma-4.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/puma-4.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/puma-5.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/puma-6.png"
+    }
+  ]
+}

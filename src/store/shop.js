@@ -16,6 +16,5 @@ export default {
     getProducts(state) {
       return state.products;
     },
-    getProduct: (state) => (article) => state.products.find((item) => item.article === article),
   },
 };

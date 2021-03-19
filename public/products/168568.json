@@ -1,0 +1,21 @@
+{
+  "article": "168568",
+  "title": "Converse Chuck Lite",
+  "description": "Кеды Converse Chuck Lite обеспечивают невероятный комфорт на весь день для любителей нового стиля. Знаменитые кеды от культового бренда Converse - стильная и практичная обувь в повседневном гардеробе. Кеды способны ошеломить ваших друзей всерьез и надолго.",
+  "price": "6.399 ₽",
+  "image": "/images/converse-10.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/converse-10.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/converse-11.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/converse-12.png"
+    }
+  ]
+}
