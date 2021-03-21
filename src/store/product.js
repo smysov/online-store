@@ -1,25 +1,25 @@
-import axios from '@/plugins/axios';
+import axios from '../plugins/axios';
 
 export default {
   state: {
-    products: [],
+    product: null,
     loading: true,
   },
   mutations: {
-    GET_PRODUCTS(state, payload) {
-      state.products = payload;
+    GET_PRODUCT(state, payload) {
+      state.product = payload;
     },
   },
   actions: {
-    async getProducts({ commit, state }) {
+    async getProduct({ commit, state }, article) {
       state.loading = true;
       try {
-        const response = await axios.get('products/products.json');
-        commit('GET_PRODUCTS', response.data);
+        const response = await axios.get(`products/${article}.json`);
+        commit('GET_PRODUCT', response.data);
         await new Promise((resolve) => {
           setTimeout(() => {
             resolve();
-          }, 2000);
+          }, 1500);
         });
       } catch (e) {
         console.log(e.response.data);
@@ -29,10 +29,10 @@ export default {
     },
   },
   getters: {
-    getProducts(state) {
-      return state.products;
+    getProduct(state) {
+      return state.product;
     },
-    getLoadingShop(state) {
+    getLoadingProduct(state) {
       return state.loading;
     },
   },

@@ -20,35 +20,22 @@
 import productItem from '@/components/ProductItem.vue';
 import preloader from '@/components/Preloader.vue';
 import headerMain from '@/components/HeaderMain.vue';
-import axios from '@/plugins/axios';
+
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'shop',
   components: { productItem, preloader, headerMain },
-  data() {
-    return {
-      loading: true,
-    };
-  },
-  async mounted() {
-    try {
-      const response = await axios.get('products/products.json');
-      this.$store.commit('GET_PRODUCTS', response.data);
-      await new Promise((resolve) => {
-        setTimeout(() => {
-          resolve();
-        }, 1500);
-      });
-    } catch (e) {
-      console.log(e.response.data);
-    } finally {
-      this.loading = false;
-    }
-  },
+
   computed: {
-    products() {
-      return this.$store.getters.getProducts;
-    },
+    ...mapGetters({
+      products: 'getProducts',
+      loading: 'getLoadingShop',
+    }),
+
+  },
+  mounted() {
+    this.$store.dispatch('getProducts');
   },
 };
 </script>
