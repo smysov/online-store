@@ -1,13 +1,15 @@
 <template>
-  <div class="error">
-    <div class="error__wrapper">
-      <p class="error__message">error</p>
-      <h1 class="error__number">404</h1>
+  <div class="wrapper__content">
+    <div class="error">
+      <div class="error__wrapper">
+        <p class="error__message">error</p>
+        <h1 class="error__number">404</h1>
     </div>
     <p class="error__home"
       >Page not found, want to go to<br />
       <router-link :to="linkHome.url">{{ linkHome.name }}</router-link>
     </p>
+    </div>
   </div>
 </template>
 
@@ -25,6 +27,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper__content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
 .error {
   font-family: 'Lato', sans-serif;
   font-weight: 700;

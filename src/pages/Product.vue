@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper__content wrapper__content_fixed">
-    <header-main />
     <section class="section">
       <div class="container">
         <router-link class="link-back" :to="linkShop.url">{{
@@ -33,14 +32,13 @@
 </template>
 
 <script>
-import headerMain from '@/components/HeaderMain.vue';
 import preloader from '@/components/Preloader.vue';
 
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'product',
-  components: { preloader, headerMain },
+  components: { preloader },
   data() {
     return {
       linkShop: {
