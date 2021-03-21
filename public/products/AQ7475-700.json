@@ -1,0 +1,21 @@
+{
+  "article": "AQ7475-700",
+  "title": "Nike SB Zoom Janoski RM",
+  "description": "Обувь Nike SB Zoom Stefan Janoski RM сочетает в себе минималистичный дизайн и современную посадку. Новая мягкая стелька и гибкая подметка обеспечивают уверенное сцепление с доской с первых минут.",
+  "price": "5.950 ₽",
+  "image": "/images/nike-1.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/nike-1.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/nike-2.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/nike-3.png"
+    }
+  ]
+}

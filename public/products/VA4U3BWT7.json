@@ -1,0 +1,21 @@
+{
+  "article": "VA4U3BWT7",
+  "title": "Vans Old Skool Neon",
+  "description": "Vans вдохнули новую жизнь в классический силуэт Old Skool, В модели используется литая конструкция из пены и резины для максимального комфорта и устойчивости. Резиновая подметка гарантирует износостойкость и сцепление.",
+  "price": "3 799 ₽",
+  "image": "/images/vans-4.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/vans-4.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/vans-5.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/vans-6.png"
+    }
+  ]
+}

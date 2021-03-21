@@ -1,0 +1,21 @@
+{
+  "article": "VD3HY28",
+  "title": "Кеды Vans Old Skool",
+  "description": "Vans Old Skool - классическая версия низких кедов, которые выпускаются брендом с 1977 года. За многолетнюю историю Vans Old Skool стали настоящим воплощением калифорнийского стиля и любимой обувью скейтбордистов и серферов. Кеды, которые станут отличным дополнением каждого гардероба. Данное издание модели изготовлено из прочного текстиля.",
+  "price": "4.600 ₽",
+  "image": "/images/vans-1.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/vans-1.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/vans-2.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/vans-3.png"
+    }
+  ]
+}

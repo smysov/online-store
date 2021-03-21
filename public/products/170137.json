@@ -1,0 +1,21 @@
+{
+  "article": "170137",
+  "title": "Converse Chuck Taylor All Star Cx",
+  "description": "Больше сути Chuck, меньше объема. В высоких кедах CX применяется революционный пеноматериал CX из нашего набора инновационных технологий обеспечения комфорта. Это одна из самых легких и удобных моделей Chuck Taylor All Star. ",
+  "price": "9.450 ₽",
+  "image": "/images/converse-7.png",
+  "gallery": [
+    {
+      "name": "First photo sneaker",
+      "photo": "/images/converse-7.png"
+    },
+    {
+      "name": "Second photo sneaker",
+      "photo": "/images/converse-8.png"
+    },
+    {
+      "name": "Third photo sneaker",
+      "photo": "/images/converse-9.png"
+    }
+  ]
+}
