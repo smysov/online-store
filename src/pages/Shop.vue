@@ -30,8 +30,9 @@ export default {
   computed: {
     ...mapGetters({
       products: 'getProducts',
-      loading: 'getLoading',
+      loading: 'getLoadingShop',
     }),
+
   },
   mounted() {
     this.$store.dispatch('getProducts');
