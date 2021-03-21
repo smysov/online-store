@@ -16,7 +16,7 @@
               paginationActiveColor="#494ce8"
             >
               <slide v-for="(slide, index) of product.gallery" :key="index">
-                <img :src="slide.photo" :alt="product.title" />
+                <img :src="slide.photo" :alt="product.name" />
               </slide>
             </carousel>
           </div>
@@ -33,38 +33,31 @@
 </template>
 
 <script>
-import headerMain from '../components/HeaderMain.vue';
-import preloader from '../components/Preloader.vue';
-import axios from '../plugins/axios';
+import headerMain from '@/components/HeaderMain.vue';
+import preloader from '@/components/Preloader.vue';
+
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'product',
   components: { preloader, headerMain },
   data() {
     return {
-      loading: true,
-      product: null,
       linkShop: {
         name: 'back',
         url: '/shop',
       },
     };
   },
-  async mounted() {
+  computed: {
+    ...mapGetters({
+      product: 'getProduct',
+      loading: 'getLoadingProduct',
+    }),
+  },
+  mounted() {
     const { article } = this.$route.params;
-    try {
-      await new Promise((resolve) => {
-        setTimeout(() => {
-          resolve();
-        }, 1000);
-      });
-      const response = await axios.get(`products/${article}.json`);
-      this.product = response.data;
-    } catch (e) {
-      console.log('error');
-    } finally {
-      this.loading = false;
-    }
+    this.$store.dispatch('getProduct', article);
   },
 };
 </script>
