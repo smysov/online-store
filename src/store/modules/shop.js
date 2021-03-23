@@ -3,7 +3,6 @@ import axios from '@/plugins/axios';
 export default {
   state: {
     products: [],
-    loading: true,
   },
   mutations: {
     GET_PRODUCTS(state, payload) {
@@ -11,8 +10,8 @@ export default {
     },
   },
   actions: {
-    async getProducts({ commit, state }) {
-      state.loading = true;
+    async getProducts({ commit, dispatch }) {
+      dispatch('setLoading', true);
       try {
         const response = await axios.get('products/products.json');
         commit('GET_PRODUCTS', response.data);
@@ -24,16 +23,13 @@ export default {
       } catch (e) {
         console.log(e.response.data);
       } finally {
-        state.loading = false;
+        dispatch('setLoading', false);
       }
     },
   },
   getters: {
     getProducts(state) {
       return state.products;
-    },
-    getLoadingShop(state) {
-      return state.loading;
     },
   },
 };

@@ -1,9 +1,8 @@
-import axios from '../plugins/axios';
+import axios from '@/plugins/axios';
 
 export default {
   state: {
     product: null,
-    loading: true,
   },
   mutations: {
     GET_PRODUCT(state, payload) {
@@ -11,29 +10,26 @@ export default {
     },
   },
   actions: {
-    async getProduct({ commit, state }, article) {
-      state.loading = true;
+    async getProduct({ commit, dispatch }, article) {
+      dispatch('setLoading', true);
       try {
         const response = await axios.get(`products/${article}.json`);
         commit('GET_PRODUCT', response.data);
         await new Promise((resolve) => {
           setTimeout(() => {
             resolve();
-          }, 1500);
+          }, 1000);
         });
       } catch (e) {
         console.log(e.response.data);
       } finally {
-        state.loading = false;
+        dispatch('setLoading', false);
       }
     },
   },
   getters: {
     getProduct(state) {
       return state.product;
-    },
-    getLoadingProduct(state) {
-      return state.loading;
     },
   },
 };

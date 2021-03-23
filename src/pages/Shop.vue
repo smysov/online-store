@@ -30,7 +30,7 @@ export default {
   computed: {
     ...mapGetters({
       products: 'getProducts',
-      loading: 'getLoadingShop',
+      loading: 'getLoading',
     }),
 
   },
