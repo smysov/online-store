@@ -50,7 +50,7 @@ export default {
   computed: {
     ...mapGetters({
       product: 'getProduct',
-      loading: 'getLoadingProduct',
+      loading: 'getLoading',
     }),
   },
   mounted() {
